@@ -60,11 +60,11 @@ public class EurekaDiscoveryClientConfiguration {
 		@Autowired(required = false)
 		private HealthAggregator healthAggregator = new OrderedHealthAggregator();
 
-		@Bean
-		@ConditionalOnMissingBean(HealthCheckHandler.class)
-		public EurekaHealthCheckHandler eurekaHealthCheckHandler() {
-			return new EurekaHealthCheckHandler(this.healthAggregator);
-		}
+//		@Bean
+//		@ConditionalOnMissingBean(HealthCheckHandler.class)
+//		public EurekaHealthCheckHandler eurekaHealthCheckHandler() {
+//			return new EurekaHealthCheckHandler(this.healthAggregator);
+//		}
 
 	}
 

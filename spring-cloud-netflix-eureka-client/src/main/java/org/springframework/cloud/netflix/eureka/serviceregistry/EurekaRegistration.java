@@ -72,7 +72,6 @@ public class EurekaRegistration implements Registration {
 		return new Builder(instanceConfig);
 	}
 
-	@Override
 	public String getInstanceId() {
 		return this.instanceConfig.getInstanceId();
 	}

@@ -218,7 +218,6 @@ public class RibbonLoadBalancerClient implements LoadBalancerClient {
 			this.metadata = metadata;
 		}
 
-		@Override
 		public String getInstanceId() {
 			return this.server.getId();
 		}

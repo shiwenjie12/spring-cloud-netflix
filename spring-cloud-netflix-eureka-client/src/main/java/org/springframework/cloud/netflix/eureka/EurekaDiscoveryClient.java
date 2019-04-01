@@ -99,10 +99,9 @@ public class EurekaDiscoveryClient implements DiscoveryClient {
 		return names;
 	}
 
-	@Override
 	public int getOrder() {
 		return clientConfig instanceof Ordered ? ((Ordered) clientConfig).getOrder()
-				: DiscoveryClient.DEFAULT_ORDER;
+				: 0;
 	}
 
 	/**
@@ -121,7 +120,6 @@ public class EurekaDiscoveryClient implements DiscoveryClient {
 			return instance;
 		}
 
-		@Override
 		public String getInstanceId() {
 			return this.instance.getId();
 		}

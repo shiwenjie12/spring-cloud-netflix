@@ -127,6 +127,11 @@ public class EurekaAutoServiceRegistration implements AutoServiceRegistration,
 	}
 
 	@Override
+	public boolean supportsSourceType(Class<?> sourceType) {
+		return false;
+	}
+
+	@Override
 	public void onApplicationEvent(ApplicationEvent event) {
 		if (event instanceof WebServerInitializedEvent) {
 			onApplicationEvent((WebServerInitializedEvent) event);
