@@ -20,6 +20,7 @@ import java.util.Collection;
 import java.util.List;
 
 /**
+ * 路线定位器
  * @author Dave Syer
  */
 public interface RouteLocator {

@@ -81,6 +81,7 @@ import static java.util.Collections.emptyList;
  * @author Spencer Gibb
  * @author Dave Syer
  * @author Biju Kunjummen
+ * 真正的服务器ZuulServer自动装配类
  */
 @Configuration
 @EnableConfigurationProperties({ ZuulProperties.class })

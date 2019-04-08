@@ -35,8 +35,7 @@ import org.springframework.util.PatternMatchUtils;
 import org.springframework.util.StringUtils;
 
 /**
- * A {@link RouteLocator} that combines static, configured routes with those from a
- * {@link DiscoveryClient}. The discovery client takes precedence.
+ * 一个{@link RouteLocator}，它将静态的，已配置的路由与来自{@link DiscoveryClient}的路由组合在一起。发现客户端优先。
  *
  * @author Spencer Gibb
  * @author Dave Syer
@@ -102,11 +101,13 @@ public class DiscoveryClientRouteLocator extends SimpleRouteLocator
 		refresh();
 	}
 
+	// 使用发现器实现路由查找
 	@Override
 	protected LinkedHashMap<String, ZuulRoute> locateRoutes() {
 		LinkedHashMap<String, ZuulRoute> routesMap = new LinkedHashMap<>();
 		routesMap.putAll(super.locateRoutes());
 		if (this.discovery != null) {
+			// 静态属性处理
 			Map<String, ZuulRoute> staticServices = new LinkedHashMap<>();
 			for (ZuulRoute route : routesMap.values()) {
 				String serviceId = route.getServiceId();
@@ -117,7 +118,7 @@ public class DiscoveryClientRouteLocator extends SimpleRouteLocator
 					staticServices.put(serviceId, route);
 				}
 			}
-			// Add routes for discovery services by default
+			// 默认情况下为发现服务添加路由
 			List<String> services = this.discovery.getServices();
 			String[] ignored = this.properties.getIgnoredServices()
 					.toArray(new String[0]);

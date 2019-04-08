@@ -19,7 +19,7 @@ package org.springframework.cloud.netflix.zuul.filters.discovery;
 /**
  * @author Stéphane Leroy
  *
- * A simple passthru service route mapper.
+ *一个简单的passthru服务路由映射器。
  */
 public class SimpleServiceRouteMapper implements ServiceRouteMapper {
 

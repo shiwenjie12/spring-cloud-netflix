@@ -25,6 +25,7 @@ import org.springframework.cloud.netflix.ribbon.support.RibbonCommandContext;
 import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 import org.springframework.cloud.netflix.zuul.filters.route.FallbackProvider;
 import org.springframework.cloud.netflix.zuul.filters.route.support.AbstractRibbonCommand;
+import okhttp3.OkHttpClient;
 
 /**
  * @author Spencer Gibb
@@ -44,6 +45,7 @@ public class OkHttpRibbonCommand extends
 			final ZuulProperties zuulProperties,
 			final FallbackProvider zuulFallbackProvider) {
 		super(commandKey, client, context, zuulProperties, zuulFallbackProvider);
+
 	}
 
 	public OkHttpRibbonCommand(final String commandKey,

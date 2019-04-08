@@ -24,8 +24,7 @@ import org.springframework.util.StringUtils;
 /**
  * @author Stéphane Leroy
  *
- * This service route mapper use Java 7 RegEx named group feature to rewrite a discovered
- * service Id into a route.
+ * 此服务路由映射器使用Java 7 RegEx命名组功能将已发现的服务Id重写为路由。
  *
  * Ex : If we want to map service Id <code>[rest-service-v1]</code> to
  * <code>/v1/rest-service/**</code> route service pattern :

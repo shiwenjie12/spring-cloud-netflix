@@ -17,7 +17,7 @@
 package org.springframework.cloud.netflix.zuul.filters;
 
 /**
- * Interface for a route locator that can be refreshed if routes change.
+ * 路由定位器的接口，如果路由发生变化，可以刷新。
  *
  * @author Dave Syer
  */

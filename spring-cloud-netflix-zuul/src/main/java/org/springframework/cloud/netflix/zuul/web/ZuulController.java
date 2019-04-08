@@ -26,6 +26,8 @@ import org.springframework.web.servlet.ModelAndView;
 import org.springframework.web.servlet.mvc.ServletWrappingController;
 
 /**
+ * 将ZuulServlet包装为Controller
+ * ZuulServlet是真正进行请求转发的的处理器
  * @author Spencer Gibb
  */
 public class ZuulController extends ServletWrappingController {
@@ -40,8 +42,7 @@ public class ZuulController extends ServletWrappingController {
 	public ModelAndView handleRequest(HttpServletRequest request,
 			HttpServletResponse response) throws Exception {
 		try {
-			// We don't care about the other features of the base class, just want to
-			// handle the request
+			// 我们不关心基类的其他功能，只想处理请求
 			return super.handleRequestInternal(request, response);
 		}
 		finally {

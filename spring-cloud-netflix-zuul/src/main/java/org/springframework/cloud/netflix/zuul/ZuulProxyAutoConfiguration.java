@@ -56,6 +56,7 @@ import org.springframework.context.annotation.Import;
  * @author Spencer Gibb
  * @author Dave Syer
  * @author Biju Kunjummen
+ * Zuul代理的自动装配类
  */
 @Configuration
 @Import({ RibbonCommandFactoryConfiguration.RestClientRibbonConfiguration.class,

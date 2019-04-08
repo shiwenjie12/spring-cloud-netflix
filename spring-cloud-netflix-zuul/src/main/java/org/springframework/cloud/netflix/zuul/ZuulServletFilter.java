@@ -27,6 +27,7 @@ import com.netflix.zuul.context.RequestContext;
 
 /**
  * @author Craig Andrews
+ * 没有用的
  */
 public class ZuulServletFilter extends com.netflix.zuul.filters.ZuulServletFilter {
 

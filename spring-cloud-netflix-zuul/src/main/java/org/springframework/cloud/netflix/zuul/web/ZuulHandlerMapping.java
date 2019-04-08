@@ -33,7 +33,7 @@ import org.springframework.web.servlet.HandlerExecutionChain;
 import org.springframework.web.servlet.handler.AbstractUrlHandlerMapping;
 
 /**
- * MVC HandlerMapping that maps incoming request paths to remote services.
+ * MVC HandlerMapping将传入的请求路径映射到远程服务。
  *
  * @author Spencer Gibb
  * @author Dave Syer
@@ -105,6 +105,7 @@ public class ZuulHandlerMapping extends AbstractUrlHandlerMapping {
 		return super.lookupHandler(urlPath, request);
 	}
 
+	// 忽略路径
 	private boolean isIgnoredPath(String urlPath, Collection<String> ignored) {
 		if (ignored != null) {
 			for (String ignoredPath : ignored) {
@@ -116,6 +117,7 @@ public class ZuulHandlerMapping extends AbstractUrlHandlerMapping {
 		return false;
 	}
 
+	// 将路由定位器中的路由进行注册
 	private void registerHandlers() {
 		Collection<Route> routes = this.routeLocator.getRoutes();
 		if (routes.isEmpty()) {

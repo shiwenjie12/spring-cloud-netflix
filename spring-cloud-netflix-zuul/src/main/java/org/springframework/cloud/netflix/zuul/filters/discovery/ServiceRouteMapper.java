@@ -17,7 +17,7 @@
 package org.springframework.cloud.netflix.zuul.filters.discovery;
 
 /**
- * Provide a way to apply convention between routes and discovered services name.
+ * 提供在路由和已发现服务名称之间应用约定的方法。
  *
  * @author Stéphane LEROY
  *

@@ -35,7 +35,7 @@ import org.springframework.util.PathMatcher;
 import org.springframework.util.StringUtils;
 
 /**
- * Simple {@link RouteLocator} based on configuration data held in {@link ZuulProperties}.
+ *简单 {@link RouteLocator} 基于 {@link ZuulProperties} 中保存的配置数据。
  *
  * @author Dave Syer
  */
@@ -96,9 +96,7 @@ public class SimpleRouteLocator implements RouteLocator, Ordered {
 
 	@Override
 	public Route getMatchingRoute(final String path) {
-
 		return getSimpleMatchingRoute(path);
-
 	}
 
 	protected Map<String, ZuulRoute> getRoutesMap() {
@@ -113,7 +111,7 @@ public class SimpleRouteLocator implements RouteLocator, Ordered {
 			log.debug("Finding route for path: " + path);
 		}
 
-		// This is called for the initialization done in getRoutesMap()
+		// 调用getRoutesMap（）进行初始化
 		getRoutesMap();
 
 		if (log.isDebugEnabled()) {
@@ -187,9 +185,8 @@ public class SimpleRouteLocator implements RouteLocator, Ordered {
 	}
 
 	/**
-	 * Compute a map of path pattern to route. The default is just a static map from the
-	 * {@link ZuulProperties}, but subclasses can add dynamic calculations.
-	 * @return map of Zuul routes
+	 * 计算要路由的路径模式的映射。默认只是来自的静态地图{@link ZuulProperties}，但子类可以添加动态计算。
+	 * @return Zuul路线地图
 	 */
 	protected Map<String, ZuulRoute> locateRoutes() {
 		LinkedHashMap<String, ZuulRoute> routesMap = new LinkedHashMap<>();

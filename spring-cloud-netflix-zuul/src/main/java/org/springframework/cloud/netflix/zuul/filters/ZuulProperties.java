@@ -44,6 +44,7 @@ import static com.netflix.hystrix.HystrixCommandProperties.ExecutionIsolationStr
  * @author Mathias Düsterhöft
  * @author Bilal Alp
  * @author Gregor Zurowski
+ * zuul的配置属性
  */
 @ConfigurationProperties("zuul")
 public class ZuulProperties {
@@ -76,6 +77,7 @@ public class ZuulProperties {
 
 	/**
 	 * Map of route names to properties.
+	 * 关键
 	 */
 	private Map<String, ZuulRoute> routes = new LinkedHashMap<>();
 
@@ -167,8 +169,9 @@ public class ZuulProperties {
 
 	private ExecutionIsolationStrategy ribbonIsolationStrategy = SEMAPHORE;
 
+	// 信号量
 	private HystrixSemaphore semaphore = new HystrixSemaphore();
-
+	// 线程池
 	private HystrixThreadPool threadPool = new HystrixThreadPool();
 
 	/**
