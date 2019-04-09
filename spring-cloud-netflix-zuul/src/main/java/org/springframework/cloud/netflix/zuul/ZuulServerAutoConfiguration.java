@@ -256,6 +256,7 @@ public class ZuulServerAutoConfiguration {
 
 	}
 
+	// 度量配置
 	@Configuration
 	protected static class ZuulMetricsConfiguration {
 

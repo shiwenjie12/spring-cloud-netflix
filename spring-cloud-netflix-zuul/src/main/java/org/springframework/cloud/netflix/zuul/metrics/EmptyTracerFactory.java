@@ -20,7 +20,7 @@ import com.netflix.zuul.monitoring.Tracer;
 import com.netflix.zuul.monitoring.TracerFactory;
 
 /**
- * A time based monitoring factory that does nothing.
+ * 基于时间的监控工厂，什么都不做。
  *
  * @author Anastasiia Smirnova
  */

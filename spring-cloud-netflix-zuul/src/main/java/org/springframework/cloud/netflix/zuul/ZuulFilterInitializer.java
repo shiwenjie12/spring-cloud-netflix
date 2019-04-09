@@ -33,7 +33,7 @@ import org.apache.commons.logging.LogFactory;
 import org.springframework.util.ReflectionUtils;
 
 /**
- * Initializes various Zuul components including {@link ZuulFilter}.
+ * 初始化各种Zuul组件，包括{@link ZuulFilter}。
  *
  * @author Spencer Gibb
  *

@@ -22,8 +22,7 @@ import org.springframework.boot.context.event.ApplicationReadyEvent;
 import org.springframework.context.ApplicationListener;
 
 /**
- * Responsible for eagerly creating the child application context holding the Ribbon
- * related configuration.
+ * 负责热切地创建包含功能区相关配置的子应用程序上下文。
  *
  * @author Biju Kunjummen
  */

@@ -19,7 +19,7 @@ package org.springframework.cloud.netflix.zuul.util;
 import com.netflix.zuul.exception.ZuulException;
 
 /**
- * @author Spencer Gibb
+ * @author Spencer Gibb Zuul异常
  */
 public class ZuulRuntimeException extends RuntimeException {
 

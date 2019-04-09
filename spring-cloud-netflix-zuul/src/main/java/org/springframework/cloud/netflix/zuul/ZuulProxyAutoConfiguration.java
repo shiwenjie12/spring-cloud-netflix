@@ -149,6 +149,7 @@ public class ZuulProxyAutoConfiguration extends ZuulServerAutoConfiguration {
 
 	}
 
+	// 健康配置
 	@Configuration
 	@ConditionalOnClass(Health.class)
 	protected static class EndpointConfiguration {

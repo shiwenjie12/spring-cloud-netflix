@@ -20,8 +20,7 @@ import com.netflix.zuul.monitoring.CounterFactory;
 import io.micrometer.core.instrument.MeterRegistry;
 
 /**
- * A counter based monitoring factory that uses {@link MeterRegistry} to increment
- * counters.
+ * 基于计数器的监视工厂，使用{@link MeterRegistry}来增加计数器。
  *
  * @author Anastasiia Smirnova
  */

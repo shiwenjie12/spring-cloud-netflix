@@ -29,7 +29,7 @@ import org.springframework.boot.actuate.endpoint.annotation.Endpoint;
 import org.springframework.boot.actuate.endpoint.annotation.ReadOperation;
 
 /**
- * Endpoint for listing Zuul filters.
+ * 用于列出Zuul过滤器的端点。
  *
  * @author Daryl Robbins
  * @author Gregor Zurowski

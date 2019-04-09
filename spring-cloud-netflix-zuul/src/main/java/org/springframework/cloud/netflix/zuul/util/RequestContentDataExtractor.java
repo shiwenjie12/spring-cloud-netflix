@@ -44,8 +44,7 @@ import static org.springframework.util.StringUtils.tokenizeToStringArray;
 import static org.springframework.util.StringUtils.uriDecode;
 
 /**
- * Utility class providing methods for extracting {@link HttpServletRequest} content as a
- * {@link MultiValueMap}.
+ * 实用程序类提供将 {@link HttpServletRequest} 内容提取为 {@link MultiValueMap} 的方法。
  *
  * @author Eloi Poch
  * @author Spencer Gibb

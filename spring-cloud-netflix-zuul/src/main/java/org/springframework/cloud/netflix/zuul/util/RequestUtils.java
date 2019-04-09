@@ -21,8 +21,7 @@ import com.netflix.zuul.context.RequestContext;
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.IS_DISPATCHER_SERVLET_REQUEST_KEY;
 
 /**
- * Utility class providing methods to verify if the current request is a dispatcher
- * servlet or a Zuul servlet request.
+ * 实用程序类提供验证当前请求是调度程序servlet还是Zuul servlet请求的方法。
  *
  * @author Adrian Ivan
  * @author Spencer Gibb

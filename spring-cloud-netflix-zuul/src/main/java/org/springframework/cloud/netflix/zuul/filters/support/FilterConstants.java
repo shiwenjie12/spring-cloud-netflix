@@ -23,7 +23,7 @@ import org.springframework.cloud.netflix.zuul.filters.pre.Servlet30WrapperFilter
 import org.springframework.cloud.netflix.zuul.filters.route.SendForwardFilter;
 
 /**
- * @author Spencer Gibb
+ * @author Spencer Gibb  Filter常量
  */
 public final class FilterConstants {
 
