@@ -37,7 +37,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.SEND_RESPONSE_FILTER_ORDER;
 
 /**
- * {@link ZuulFilter} Responsible for rewriting the Location header to be the Zuul URL.
+ * {@link ZuulFilter}负责将Location标头重写为Zuul URL。
  *
  * @author Biju Kunjummen
  */

@@ -38,8 +38,9 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.SEND_ERROR_FILTER_ORDER;
 
 /**
- * Error {@link ZuulFilter} that forwards to /error (by default) if
- * {@link RequestContext#getThrowable()} is not null.
+ * Error {@link ZuulFilter} that forwards to /error (by default) if {@link RequestContext#getThrowable()} is not null.
+ *
+ * 如果{@link RequestContext#getThrowable()}不为null，则错误{@link ZuulFilter} 转发到/ error（默认情况下）。
  *
  * @author Spencer Gibb
  */

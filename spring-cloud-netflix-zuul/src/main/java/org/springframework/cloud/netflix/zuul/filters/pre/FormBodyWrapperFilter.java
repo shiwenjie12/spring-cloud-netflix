@@ -47,7 +47,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.PRE_TYPE;
 
 /**
- * Pre {@link ZuulFilter} that parses form data and reencodes it for downstream services.
+ * Pre {@link ZuulFilter}解析表单数据并为下游服务重新编码。
  *
  * @author Dave Syer
  */

@@ -46,8 +46,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.X_ZUUL_DEBUG_HEADER;
 
 /**
- * Post {@link ZuulFilter} that writes responses from proxied requests to the current
- * response.
+ * 发布{@link ZuulFilter}，将代理请求的响应写入当前响应。
  *
  * @author Spencer Gibb
  * @author Dave Syer
@@ -299,7 +298,7 @@ public class SendResponseFilter extends ZuulFilter {
 	}
 
 	/**
-	 * InputStream recording bytes read to allow for a reset() until recording is stopped.
+	 * InputStream记录读取的字节以允许reset()直到记录停止。
 	 */
 	private static class RecordingInputStream extends InputStream {
 
