@@ -74,9 +74,8 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.SIMPLE_HOST_ROUTING_FILTER_ORDER;
 
 /**
- * Route {@link ZuulFilter} that sends requests to predetermined URLs via apache
- * {@link HttpClient}. URLs are found in {@link RequestContext#getRouteHost()}.
- *
+ * Route {@link ZuulFilter} that sends requests to predetermined URLs via apache{@link HttpClient}. URLs are found in {@link RequestContext#getRouteHost()}.
+ * 路由{@link ZuulFilter}通过apache {@link HttpClient}向预定的URL发送请求。 URL位于{@link RequestContext#getRouteHost()}中。
  * @author Spencer Gibb
  * @author Dave Syer
  * @author Bilal Alp
@@ -299,6 +298,7 @@ public class SimpleHostRoutingFilter extends ZuulFilter
 				.build();
 	}
 
+	// 向其他服务发送请求
 	private CloseableHttpResponse forward(CloseableHttpClient httpclient, String verb,
 			String uri, HttpServletRequest request, MultiValueMap<String, String> headers,
 			MultiValueMap<String, String> params, InputStream requestEntity)

@@ -32,7 +32,7 @@ import static org.springframework.cloud.netflix.zuul.filters.support.FilterConst
  * Forwarding location is located in the {@link RequestContext} attribute
  * {@link org.springframework.cloud.netflix.zuul.filters.support.FilterConstants#FORWARD_TO_KEY}.
  * Useful for forwarding to endpoints in the current application.
- *
+ * // forward转发过滤器
  * @author Dave Syer
  */
 public class SendForwardFilter extends ZuulFilter {

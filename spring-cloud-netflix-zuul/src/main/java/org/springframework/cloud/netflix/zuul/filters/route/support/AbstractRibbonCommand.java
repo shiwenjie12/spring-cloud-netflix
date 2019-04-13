@@ -22,6 +22,7 @@ import com.netflix.client.config.DefaultClientConfigImpl;
 import com.netflix.client.config.IClientConfig;
 import com.netflix.client.config.IClientConfigKey;
 import com.netflix.client.http.HttpResponse;
+import com.netflix.config.ConfigurationManager;
 import com.netflix.config.DynamicIntProperty;
 import com.netflix.config.DynamicPropertyFactory;
 import com.netflix.hystrix.HystrixCommand;
@@ -91,7 +92,10 @@ public abstract class AbstractRibbonCommand<LBC extends AbstractLoadBalancerAwar
 	protected AbstractRibbonCommand(Setter setter, LBC client,
 			RibbonCommandContext context, FallbackProvider fallbackProvider,
 			IClientConfig config) {
+		//super(Setter.withGroupKey(HystrixCommandGroupKey.Factory.asKey("ExampleGroup"))
+		//		.andCommandPropertiesDefaults(HystrixCommandProperties.Setter().withExecutionTimeoutInMilliseconds(500)));
 		super(setter);
+		//ConfigurationManager.getConfigInstance().setProperty("1111","11");
 		this.client = client;
 		this.context = context;
 		this.zuulFallbackProvider = fallbackProvider;
