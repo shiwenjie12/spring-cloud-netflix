@@ -42,6 +42,7 @@ import org.springframework.util.MultiValueMap;
 import org.springframework.util.StringUtils;
 
 /**
+ * 添加一些追踪信息
  * @author Spencer Gibb
  */
 public class TraceProxyRequestHelper extends ProxyRequestHelper {

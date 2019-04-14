@@ -89,7 +89,8 @@ public class RibbonRoutingFilter extends ZuulFilter {
 		this(new ProxyRequestHelper(), ribbonCommandFactory, null);
 	}
 
-	/* for testing */ boolean isUseServlet31() {
+	/* for testing */
+	boolean isUseServlet31() {
 		return useServlet31;
 	}
 

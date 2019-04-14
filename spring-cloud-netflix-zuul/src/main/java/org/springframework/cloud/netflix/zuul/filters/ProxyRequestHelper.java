@@ -48,6 +48,7 @@ import org.springframework.web.util.WebUtils;
 import static org.springframework.cloud.netflix.zuul.filters.support.FilterConstants.REQUEST_URI_KEY;
 
 /**
+ * 代理请求的处理器
  * @author Dave Syer
  * @author Marcos Barbero
  * @author Spencer Gibb
