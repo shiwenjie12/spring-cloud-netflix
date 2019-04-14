@@ -26,6 +26,7 @@ import org.springframework.context.annotation.Import;
 
 /**
  * @author Spencer Gibb
+ * 启用Hystrix面板
  */
 @Target(ElementType.TYPE)
 @Retention(RetentionPolicy.RUNTIME)

@@ -28,10 +28,9 @@ import org.springframework.boot.actuate.health.HealthIndicator;
 import org.springframework.boot.actuate.health.Status;
 
 /**
- * A {@link HealthIndicator} implementation for Hystrix circuit breakers.
+ * Hystrix断路器的{@link HealthIndicator}实现。
  * <p>
- * This default implementation will not change the system state (e.g. <code>OK</code>) but
- * includes all open circuits by name.
+ * 此默认实现不会更改系统状态（例如<code>OK</code>），但包括所有打开的电路名称。
  *
  * @author Christian Dupuis
  */
@@ -43,7 +42,7 @@ public class HystrixHealthIndicator extends AbstractHealthIndicator {
 	protected void doHealthCheck(Builder builder) throws Exception {
 		List<String> openCircuitBreakers = new ArrayList<>();
 
-		// Collect all open circuit breakers from Hystrix
+		// 收集Hystrix的所有开路断路器
 		for (HystrixCommandMetrics metrics : HystrixCommandMetrics.getInstances()) {
 			HystrixCircuitBreaker circuitBreaker = HystrixCircuitBreaker.Factory
 					.getInstance(metrics.getCommandKey());
@@ -53,9 +52,7 @@ public class HystrixHealthIndicator extends AbstractHealthIndicator {
 			}
 		}
 
-		// If there is at least one open circuit report OUT_OF_SERVICE adding the command
-		// group
-		// and key name
+		// 如果至少有一个开路报告OUT_OF_SERVICE添加命令组和密钥名称
 		if (!openCircuitBreakers.isEmpty()) {
 			builder.status(CIRCUIT_OPEN).withDetail("openCircuitBreakers",
 					openCircuitBreakers);

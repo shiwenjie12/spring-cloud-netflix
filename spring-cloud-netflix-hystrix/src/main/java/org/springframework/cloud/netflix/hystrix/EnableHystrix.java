@@ -31,7 +31,7 @@ import org.springframework.cloud.client.circuitbreaker.EnableCircuitBreaker;
  * you want. All it does is turn on circuit breakers and let the autoconfiguration find
  * the Hystrix classes if they are available (i.e. you need Hystrix on the classpath as
  * well).
- *
+ * 启用Hystrix熔断器
  * @author Dave Syer
  * @author Spencer Gibb
  */

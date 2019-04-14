@@ -26,6 +26,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.GetMapping;
 
 /**
+ * webflux的stream的接口
  * @author Spencer Gibb
  */
 @RestControllerEndpoint(id = "hystrix.stream")

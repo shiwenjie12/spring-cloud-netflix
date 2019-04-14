@@ -21,6 +21,7 @@ import java.util.Objects;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
+ * 抛弃后未被使用
  * @author Venil Noronha
  * @author Gregor Zurowski
  */

@@ -35,7 +35,7 @@ public class HystrixDashboardProperties {
 	private boolean enableIgnoreConnectionCloseHeader = false;
 
 	/**
-	 * Initialization parameters for {@link ProxyStreamServlet}. ProxyStreamServlet itself
+	 * Initialization parameters for {@link HystrixDashboardConfiguration.ProxyStreamServlet}. ProxyStreamServlet itself
 	 * is not dependent on any initialization parameters, but could be used for adding web
 	 * container specific configurations. i.e. wl-dispatch-policy for WebLogic.
 	 */

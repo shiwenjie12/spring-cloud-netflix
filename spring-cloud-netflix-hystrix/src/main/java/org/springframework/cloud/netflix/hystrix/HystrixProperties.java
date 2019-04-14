@@ -22,7 +22,7 @@ import java.util.Map;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Configuration properties for Hystrix Servlet.
+ * Hystrix Servlet的配置属性。
  *
  * @author Spencer Gibb
  * @since 2.0.0

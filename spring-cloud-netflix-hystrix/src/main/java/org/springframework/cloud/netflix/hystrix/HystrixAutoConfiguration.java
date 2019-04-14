@@ -45,7 +45,7 @@ import static org.springframework.boot.autoconfigure.condition.ConditionalOnWebA
 import static org.springframework.boot.autoconfigure.condition.ConditionalOnWebApplication.Type.SERVLET;
 
 /**
- * Auto configuration for Hystrix.
+ * Hystrix的自动配置。
  *
  * @author Christian Dupuis
  * @author Dave Syer
