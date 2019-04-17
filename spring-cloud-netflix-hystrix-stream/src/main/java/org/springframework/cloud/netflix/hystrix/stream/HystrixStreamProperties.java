@@ -47,8 +47,7 @@ public class HystrixStreamProperties {
 	private long sendRate = 500;
 
 	/**
-	 * How often to put messages in the queue. This queue drains to the stream. Defaults
-	 * to 500.
+	 * 将消息放入队列的频率。此队列将流入流中。默认为500。
 	 */
 	private long gatherRate = 500;
 

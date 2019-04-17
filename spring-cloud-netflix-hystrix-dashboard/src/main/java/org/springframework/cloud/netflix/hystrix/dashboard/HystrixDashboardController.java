@@ -24,6 +24,7 @@ import org.springframework.web.context.request.RequestAttributes;
 import org.springframework.web.context.request.WebRequest;
 
 /**
+ * 控制器由前段解析
  * @author Dave Syer
  */
 @Controller

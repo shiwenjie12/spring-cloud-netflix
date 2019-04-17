@@ -27,7 +27,7 @@ import org.springframework.boot.actuate.endpoint.web.annotation.ServletEndpoint;
 /**
  * {@link org.springframework.boot.actuate.endpoint.annotation.Endpoint} to expose a
  * Jolokia {@link HystrixMetricsStreamServlet}.
- *
+ * 暴露HystrixMetricsStreamServlet类
  * @author Phillip Webb
  * @since 2.0.0
  */

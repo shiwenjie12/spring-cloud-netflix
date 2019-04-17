@@ -40,6 +40,7 @@ import org.springframework.messaging.MessageChannel;
 import org.springframework.scheduling.annotation.EnableScheduling;
 
 /**
+ * 启动队列stream的hystrix
  * Autoconfiguration for a Spring Cloud Hystrix on Spring Cloud Stream. Enabled by default
  * if spring-cloud-stream is on the classpath, and can be switched off with
  * <code>hystrix.stream.queue.enabled</code>. There are some high level configuration

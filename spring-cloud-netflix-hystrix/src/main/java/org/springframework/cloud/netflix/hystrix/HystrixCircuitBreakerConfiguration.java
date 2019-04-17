@@ -51,8 +51,7 @@ public class HystrixCircuitBreakerConfiguration {
 	}
 
 	/**
-	 * {@link DisposableBean} that makes sure that Hystrix internal state is cleared when
-	 * {@link ApplicationContext} shuts down.
+	 * {@link DisposableBean} 确保在 {@link ApplicationContext} 关闭时清除Hystrix内部状态。
 	 */
 	private class HystrixShutdownHook implements DisposableBean {
 

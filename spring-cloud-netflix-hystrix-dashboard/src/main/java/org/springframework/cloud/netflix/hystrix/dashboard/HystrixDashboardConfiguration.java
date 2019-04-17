@@ -107,6 +107,8 @@ public class HystrixDashboardConfiguration {
 	 * Proxy an EventStream request (data.stream via proxy.stream) since EventStream does
 	 * not yet support CORS (https://bugs.webkit.org/show_bug.cgi?id=61862) so that a UI
 	 * can request a stream from a different server.
+	 * 代理一个EventStream请求（data.stream via proxy.stream），因为EventStream还不支持CORS
+	 * （https://bugs.webkit.org/show_bug.cgi?id=61862），因此UI可以请求来自不同的流服务器
 	 */
 	public static class ProxyStreamServlet extends HttpServlet {
 

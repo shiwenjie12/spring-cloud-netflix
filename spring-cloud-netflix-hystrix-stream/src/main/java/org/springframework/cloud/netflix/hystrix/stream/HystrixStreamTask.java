@@ -46,7 +46,7 @@ import org.springframework.util.Assert;
 
 /**
  * @author Spencer Gibb
- * @see com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsPoller (nested
+ * @see com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetrsPoller (nested
  * private class MetricsPoller)
  */
 public class HystrixStreamTask implements ApplicationContextAware {
@@ -88,6 +88,7 @@ public class HystrixStreamTask implements ApplicationContextAware {
 	}
 
 	// TODO: use integration to split this up?
+	// 向消息队列发送消息
 	@Scheduled(fixedRateString = "${hystrix.stream.queue.sendRate:${hystrix.stream.queue.send-rate:500}}")
 	public void sendMetrics() {
 		ArrayList<String> metrics = new ArrayList<>();
@@ -116,6 +117,7 @@ public class HystrixStreamTask implements ApplicationContextAware {
 		}
 	}
 
+	// 产生度量的json
 	@Scheduled(fixedRateString = "${hystrix.stream.queue.gatherRate:${hystrix.stream.queue.gather-rate:500}}")
 	public void gatherMetrics() {
 		try {
