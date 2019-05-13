@@ -39,6 +39,7 @@ import org.springframework.context.ApplicationContextAware;
 import org.springframework.context.ApplicationEvent;
 
 /**
+ * 实例仓库 是对peer的包装
  * @author Spencer Gibb
  */
 public class InstanceRegistry extends PeerAwareInstanceRegistryImpl

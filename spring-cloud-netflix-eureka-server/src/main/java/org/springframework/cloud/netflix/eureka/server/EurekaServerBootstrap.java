@@ -38,6 +38,7 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
 /**
+ * Eureka的服务启动器
  * @author Spencer Gibb
  */
 public class EurekaServerBootstrap {
@@ -152,7 +153,7 @@ public class EurekaServerBootstrap {
 
 		log.info("Initialized server context");
 
-		// Copy registry from neighboring eureka node
+		// 从邻近的eureka节点复制注册表
 		int registryCount = this.registry.syncUp();
 		this.registry.openForTraffic(this.applicationInfoManager, registryCount);
 

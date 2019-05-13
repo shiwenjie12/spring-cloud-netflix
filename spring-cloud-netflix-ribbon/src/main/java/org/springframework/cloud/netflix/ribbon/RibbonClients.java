@@ -28,6 +28,7 @@ import org.springframework.context.annotation.Import;
 /**
  * Convenience annotation that allows user to combine multiple <code>@RibbonClient</code>
  * annotations on a single class (including in Java 7).
+ * Ribbon客户端
  *
  * @author Dave Syer
  */

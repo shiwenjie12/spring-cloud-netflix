@@ -33,6 +33,7 @@ import org.springframework.http.client.AbstractClientHttpRequest;
 import org.springframework.http.client.ClientHttpResponse;
 
 /**
+ * RibbonHttp请求
  * @author Spencer Gibb
  */
 @SuppressWarnings("deprecation")
@@ -91,6 +92,7 @@ public class RibbonHttpRequest extends AbstractClientHttpRequest {
 				builder.entity(outputStream.toByteArray());
 			}
 			HttpRequest request = builder.build();
+			// RestClient客户端执行请求
 			HttpResponse response = client.executeWithLoadBalancer(request, config);
 			return new RibbonHttpResponse(response);
 		}

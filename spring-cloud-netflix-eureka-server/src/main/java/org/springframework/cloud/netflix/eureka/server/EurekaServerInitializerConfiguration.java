@@ -33,6 +33,7 @@ import org.springframework.core.Ordered;
 import org.springframework.web.context.ServletContextAware;
 
 /**
+ * eureka服务器的初始器
  * @author Dave Syer
  */
 @Configuration

@@ -48,6 +48,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
 /**
+ * Eureka的控制器，主要是对ApplicationInfoManager的解析
  * @author Spencer Gibb
  * @author Gang Li
  */
@@ -141,6 +142,7 @@ public class EurekaController {
 		return getServerContext().getRegistry();
 	}
 
+	// eureka服务器上下文
 	private EurekaServerContext getServerContext() {
 		return EurekaServerContextHolder.getInstance().getServerContext();
 	}

@@ -32,6 +32,7 @@ import org.springframework.core.env.PropertyResolver;
 import org.springframework.core.style.ToStringCreator;
 
 /**
+ * 包装EurekaServerConfig为bean
  * @author Dave Syer
  * @author Gregor Zurowski
  */

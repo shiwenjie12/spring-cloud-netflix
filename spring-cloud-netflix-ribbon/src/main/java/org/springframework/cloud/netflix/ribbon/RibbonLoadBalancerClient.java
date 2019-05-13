@@ -35,6 +35,7 @@ import org.springframework.util.ReflectionUtils;
 import static org.springframework.cloud.netflix.ribbon.RibbonUtils.updateToSecureConnectionIfNeeded;
 
 /**
+ * Ribbon 负载均衡器客户端
  * @author Spencer Gibb
  * @author Dave Syer
  * @author Ryan Baxter
@@ -48,6 +49,7 @@ public class RibbonLoadBalancerClient implements LoadBalancerClient {
 		this.clientFactory = clientFactory;
 	}
 
+	// 重建Url
 	@Override
 	public URI reconstructURI(ServiceInstance instance, URI original) {
 		Assert.notNull(instance, "instance can not be null");
@@ -80,8 +82,9 @@ public class RibbonLoadBalancerClient implements LoadBalancerClient {
 
 	/**
 	 * New: Select a server using a 'key'.
-	 * @param serviceId of the service to choose an instance for
-	 * @param hint to specify the service instance
+	 * 通过一个key选择一个服务器
+	 * @param serviceId 选择实例的服务
+	 * @param hint 指定服务实例
 	 * @return the selected {@link ServiceInstance}
 	 */
 	public ServiceInstance choose(String serviceId, Object hint) {
@@ -166,6 +169,7 @@ public class RibbonLoadBalancerClient implements LoadBalancerClient {
 		return serverIntrospector;
 	}
 
+	// 服务器是否是安全的
 	private boolean isSecure(Server server, String serviceId) {
 		IClientConfig config = this.clientFactory.getClientConfig(serviceId);
 		ServerIntrospector serverIntrospector = serverIntrospector(serviceId);
@@ -189,12 +193,13 @@ public class RibbonLoadBalancerClient implements LoadBalancerClient {
 		return loadBalancer.chooseServer(hint != null ? hint : "default");
 	}
 
+	// 负载均衡器
 	protected ILoadBalancer getLoadBalancer(String serviceId) {
 		return this.clientFactory.getLoadBalancer(serviceId);
 	}
 
 	/**
-	 * Ribbon-server-specific {@link ServiceInstance} implementation.
+	 * 特定于功能区服务器的{@link ServiceInstance}实现。
 	 */
 	public static class RibbonServer implements ServiceInstance {
 
@@ -202,6 +207,7 @@ public class RibbonLoadBalancerClient implements LoadBalancerClient {
 
 		private final Server server;
 
+		// 安全的服务器
 		private final boolean secure;
 
 		private Map<String, String> metadata;

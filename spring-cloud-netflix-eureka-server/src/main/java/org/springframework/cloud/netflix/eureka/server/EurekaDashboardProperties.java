@@ -21,7 +21,7 @@ import java.util.Objects;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 /**
- * Configuration properties for the Eureka dashboard (UI).
+ * Eureka仪表板（UI）的配置属性。
  *
  * @author Dave Syer
  */

@@ -28,6 +28,7 @@ import org.springframework.http.client.ClientHttpRequest;
 import org.springframework.http.client.ClientHttpRequestFactory;
 
 /**
+ * ribbon请求的工厂端
  * @author Spencer Gibb
  */
 public class RibbonClientHttpRequestFactory implements ClientHttpRequestFactory {
@@ -42,11 +43,12 @@ public class RibbonClientHttpRequestFactory implements ClientHttpRequestFactory 
 	@SuppressWarnings("deprecation")
 	public ClientHttpRequest createRequest(URI originalUri, HttpMethod httpMethod)
 			throws IOException {
-		String serviceId = originalUri.getHost();
+		String serviceId = originalUri.getHost();// 服务id
 		if (serviceId == null) {
 			throw new IOException(
 					"Invalid hostname in the URI [" + originalUri.toASCIIString() + "]");
 		}
+		// ribbon 客户端配置
 		IClientConfig clientConfig = this.clientFactory.getClientConfig(serviceId);
 		RestClient client = this.clientFactory.getClient(serviceId, RestClient.class);
 		HttpRequest.Verb verb = HttpRequest.Verb.valueOf(httpMethod.name());

@@ -23,6 +23,7 @@ import org.springframework.context.ApplicationListener;
 
 /**
  * 负责热切地创建包含功能区相关配置的子应用程序上下文。
+ * 监听ApplicationReadyEvent事件
  *
  * @author Biju Kunjummen
  */
@@ -43,7 +44,7 @@ public class RibbonApplicationContextInitializer
 	protected void initialize() {
 		if (clientNames != null) {
 			for (String clientName : clientNames) {
-				this.springClientFactory.getContext(clientName);
+				this.springClientFactory.getContext(clientName);// 初始化bean
 			}
 		}
 	}

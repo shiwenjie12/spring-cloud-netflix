@@ -84,6 +84,7 @@ public class CloudJacksonJson extends LegacyJacksonJson {
 		return this.codec.readValue(type, inputStream);
 	}
 
+	// 更新需要的实例id
 	static InstanceInfo updateIfNeeded(final InstanceInfo info) {
 		if (info.getInstanceId() == null && info.getMetadata() != null) {
 			String instanceId = info.getMetadata().get("instanceId");
@@ -99,6 +100,7 @@ public class CloudJacksonJson extends LegacyJacksonJson {
 		return info;
 	}
 
+	// 添加Cloud Jackson序列化，主要是添加了额外的实现
 	static class CloudJacksonCodec extends EurekaJacksonCodec {
 
 		private static final Version VERSION = new Version(1, 1, 0, null, null, null);

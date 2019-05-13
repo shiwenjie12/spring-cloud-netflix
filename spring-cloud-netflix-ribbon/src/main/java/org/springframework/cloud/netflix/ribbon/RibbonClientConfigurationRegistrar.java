@@ -26,6 +26,7 @@ import org.springframework.core.type.AnnotationMetadata;
 import org.springframework.util.StringUtils;
 
 /**
+ * 配置注入器
  * @author Dave Syer
  */
 public class RibbonClientConfigurationRegistrar implements ImportBeanDefinitionRegistrar {
@@ -76,6 +77,7 @@ public class RibbonClientConfigurationRegistrar implements ImportBeanDefinitionR
 				"Either 'name' or 'value' must be provided in @RibbonClient");
 	}
 
+	// 注册客户端配置
 	private void registerClientConfiguration(BeanDefinitionRegistry registry, Object name,
 			Object configuration) {
 		BeanDefinitionBuilder builder = BeanDefinitionBuilder

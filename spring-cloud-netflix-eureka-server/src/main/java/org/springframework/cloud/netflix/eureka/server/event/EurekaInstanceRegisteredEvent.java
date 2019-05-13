@@ -23,6 +23,7 @@ import com.netflix.appinfo.InstanceInfo;
 import org.springframework.context.ApplicationEvent;
 
 /**
+ * Eureka实例注册事件
  * @author Spencer Gibb
  * @author Gregor Zurowski
  */

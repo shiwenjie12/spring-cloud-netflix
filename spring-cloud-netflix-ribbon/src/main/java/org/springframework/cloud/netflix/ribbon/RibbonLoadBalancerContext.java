@@ -24,6 +24,7 @@ import com.netflix.loadbalancer.ServerStats;
 import com.netflix.servo.monitor.Timer;
 
 /**
+ * Ribbon负载均衡器的上下文
  * @author Spencer Gibb
  */
 public class RibbonLoadBalancerContext extends LoadBalancerContext {

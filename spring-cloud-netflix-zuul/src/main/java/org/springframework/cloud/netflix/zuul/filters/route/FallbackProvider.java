@@ -19,7 +19,7 @@ package org.springframework.cloud.netflix.zuul.filters.route;
 import org.springframework.http.client.ClientHttpResponse;
 
 /**
- * Provides fallback when a failure occurs on a route.
+ * 在路由发生故障时提供回退。
  *
  * @author Ryan Baxter
  * @author Dominik Mostek

@@ -33,6 +33,7 @@ import org.springframework.context.annotation.Import;
  * Declarative configuration for a ribbon client. Add this annotation to any
  * <code>@Configuration</code> and then inject a {@link SpringClientFactory} to access the
  * client that is created.
+ * Ribbon客户端
  *
  * @author Dave Syer
  */

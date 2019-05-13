@@ -28,6 +28,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.client.AbstractClientHttpResponse;
 
 /**
+ * RibbonHttp响应
  * @author Spencer Gibb
  */
 public class RibbonHttpResponse extends AbstractClientHttpResponse {

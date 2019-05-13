@@ -36,7 +36,7 @@ import org.springframework.util.StringUtils;
 import static org.springframework.cloud.netflix.eureka.EurekaConstants.DEFAULT_PREFIX;
 
 /**
- * Eureka client configuration bean.
+ * Eureka客户端配置bean。
  *
  * @author Dave Syer
  * @author Gregor Zurowski

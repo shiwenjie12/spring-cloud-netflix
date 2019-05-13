@@ -68,6 +68,7 @@ import org.springframework.util.ClassUtils;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 
 /**
+ * Eureka服务器自动注入配置
  * @author Gunnar Hillert
  * @author Biju Kunjummen
  * @author Fahim Farook

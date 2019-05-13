@@ -123,10 +123,9 @@ public final class RibbonUtils {
 	}
 
 	/**
-	 * Replace the scheme to the secure variant if needed. If the
-	 * {@link #unsecureSchemeMapping} map contains the uri scheme and
-	 * {@link #isSecure(IClientConfig, ServerIntrospector, Server)} is true, update the
-	 * scheme. This assumes the uri is already encoded to avoid double encoding.
+	 * 如果需要，将方案替换为安全变体。如果{@link #unsecureSchemeMapping}映射包含uri方案
+	 * 并且{@link #isSecure（IClientConfig，ServerIntrospector，Server）}为true，则更新
+	 * 方案。这假设uri已经编码以避免双重编码。
 	 * @param uri to modify if required
 	 * @param ribbonServer to verify if it provides secure connections
 	 * @return {@link URI} updated if required

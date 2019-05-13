@@ -22,6 +22,7 @@ import org.springframework.context.ApplicationEvent;
 
 /**
  * @author Dave Syer
+ * eureka服务器启动事件
  */
 @SuppressWarnings("serial")
 public class EurekaServerStartedEvent extends ApplicationEvent {

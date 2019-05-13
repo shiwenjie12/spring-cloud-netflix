@@ -50,7 +50,7 @@ import org.springframework.web.client.AsyncRestTemplate;
 import org.springframework.web.client.RestTemplate;
 
 /**
- * Auto configuration for Ribbon (client side load balancing).
+ * 功能区的自动配置（客户端负载平衡）。
  *
  * @author Spencer Gibb
  * @author Dave Syer
@@ -66,6 +66,7 @@ import org.springframework.web.client.RestTemplate;
 		ServerIntrospectorProperties.class })
 public class RibbonAutoConfiguration {
 
+	// 所有的RibbonClient配置
 	@Autowired(required = false)
 	private List<RibbonClientSpecification> configurations = new ArrayList<>();
 
@@ -119,6 +120,7 @@ public class RibbonAutoConfiguration {
 		@Autowired
 		private SpringClientFactory springClientFactory;
 
+		// 设置RestTemlate的请求工厂
 		@Bean
 		public RestTemplateCustomizer restTemplateCustomizer(
 				final RibbonClientHttpRequestFactory ribbonClientHttpRequestFactory) {
@@ -126,6 +128,7 @@ public class RibbonAutoConfiguration {
 					.setRequestFactory(ribbonClientHttpRequestFactory);
 		}
 
+		// 请求工厂
 		@Bean
 		public RibbonClientHttpRequestFactory ribbonClientHttpRequestFactory() {
 			return new RibbonClientHttpRequestFactory(this.springClientFactory);

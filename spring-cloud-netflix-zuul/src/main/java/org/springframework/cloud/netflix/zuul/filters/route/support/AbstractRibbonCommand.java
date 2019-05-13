@@ -47,6 +47,7 @@ import org.springframework.cloud.netflix.zuul.filters.route.RibbonCommand;
 import org.springframework.http.client.ClientHttpResponse;
 
 /**
+ * 抽象的Ribbon命令，继承HystrixCommand
  * @param <RQ> {@link ClientRequest} subtype
  * @param <LBC> {@link AbstractLoadBalancingClient} subtype
  * @param <RQ> {@link ClientRequest} subtype

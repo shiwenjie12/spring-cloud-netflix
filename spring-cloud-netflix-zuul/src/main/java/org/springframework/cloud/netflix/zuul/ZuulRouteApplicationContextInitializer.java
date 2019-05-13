@@ -28,6 +28,7 @@ import org.springframework.cloud.netflix.zuul.filters.ZuulProperties;
 /**
  * Responsible for taking in the list of registered serviceid's (Ribbon client names) and
  * creating the Spring {@link org.springframework.context.ApplicationContext} on start-up.
+ * 负责接收已注册的serviceid列表（Ribbon客户端名称）并在启动时创建Spring上下文
  *
  * @author Biju Kunjummen
  */
@@ -40,6 +41,7 @@ public class ZuulRouteApplicationContextInitializer
 		super(springClientFactory, getServiceIdsFromZuulProps(zuulProperties));
 	}
 
+	// 从Zuul属性中获取serviceIds
 	private static List<String> getServiceIdsFromZuulProps(
 			ZuulProperties zuulProperties) {
 		Map<String, ZuulProperties.ZuulRoute> zuulRoutes = zuulProperties.getRoutes();
